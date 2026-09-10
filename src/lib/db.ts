@@ -5,9 +5,18 @@ import { requireDatabaseUrl } from "@/lib/env";
 // Reuse a single pool across hot reloads in dev.
 const globalForDb = globalThis as unknown as { __pgPool?: Pool };
 
+const connectionString = requireDatabaseUrl();
+
+// Local Postgres runs without TLS; hosted providers (Supabase, Neon, …) require
+// it. We don't pin a CA, which is the norm for these managed poolers.
+const ssl =
+  /\blocalhost\b|\b127\.0\.0\.1\b/.test(connectionString) &&
+  !/sslmode=require/.test(connectionString)
+    ? false
+    : { rejectUnauthorized: false };
+
 export const pool: Pool =
-  globalForDb.__pgPool ??
-  new Pool({ connectionString: requireDatabaseUrl(), max: 10 });
+  globalForDb.__pgPool ?? new Pool({ connectionString, ssl, max: 10 });
 
 if (process.env.NODE_ENV !== "production") globalForDb.__pgPool = pool;
 

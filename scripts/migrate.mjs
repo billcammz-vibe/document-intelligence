@@ -20,7 +20,13 @@ if (!DATABASE_URL) {
   process.exit(1);
 }
 
-const client = new pg.Client({ connectionString: DATABASE_URL });
+const isLocal =
+  /\blocalhost\b|\b127\.0\.0\.1\b/.test(DATABASE_URL) &&
+  !/sslmode=require/.test(DATABASE_URL);
+const client = new pg.Client({
+  connectionString: DATABASE_URL,
+  ssl: isLocal ? false : { rejectUnauthorized: false },
+});
 await client.connect();
 
 try {

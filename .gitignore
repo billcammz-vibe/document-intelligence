@@ -36,3 +36,10 @@ yarn-error.log*
 # test PDFs dropped in locally
 /sample-docs/*
 !/sample-docs/.gitkeep
+.vercel
+.env*
+!.env.example
+
+# supabase cli
+supabase/.temp
+supabase/.branches
