@@ -1,0 +1,18 @@
+# Optional: only needed if you do NOT already have a local pgvector-capable
+# Postgres (e.g. Postgres.app). Start with `docker compose up -d`, then set
+# DATABASE_URL to the "docker" line in .env.example and run `npm run db:migrate`.
+services:
+  db:
+    image: pgvector/pgvector:pg16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: document_intelligence
+    ports:
+      - "5432:5432"
+    volumes:
+      - dbdata:/var/lib/postgresql/data
+
+volumes:
+  dbdata:

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" font-family="ui-sans-serif, system-ui, sans-serif">
+  <rect width="1200" height="675" fill="#fafafa"/>
+  <rect x="1" y="1" width="1198" height="673" fill="none" stroke="#e4e4e7"/>
+  <text x="40" y="60" font-size="24" font-weight="700" fill="#18181b">✦ Document Intelligence</text>
+  <text x="40" y="88" font-size="14" fill="#71717a">Ask questions about financial PDFs — answers grounded in cited source passages.</text>
+
+  <!-- left: documents -->
+  <rect x="40" y="120" width="260" height="140" rx="12" fill="#fff" stroke="#d4d4d8" stroke-dasharray="4 4"/>
+  <text x="170" y="195" font-size="13" fill="#a1a1aa" text-anchor="middle">Drop PDFs here or click to upload</text>
+  <rect x="40" y="276" width="260" height="60" rx="10" fill="#fff" stroke="#e4e4e7"/>
+  <text x="60" y="303" font-size="13" fill="#3f3f46">apple-10-k-2024.pdf</text>
+  <rect x="60" y="313" width="52" height="16" rx="8" fill="#d1fae5"/>
+  <text x="86" y="325" font-size="10" fill="#065f46" text-anchor="middle">Ready</text>
+
+  <!-- center: conversation -->
+  <rect x="324" y="120" width="500" height="470" rx="12" fill="#fff" stroke="#e4e4e7"/>
+  <rect x="520" y="150" width="280" height="34" rx="14" fill="#4f46e5"/>
+  <text x="540" y="172" font-size="12" fill="#fff">What were total net sales year over year?</text>
+  <rect x="348" y="205" width="452" height="150" rx="14" fill="#fafafa" stroke="#e4e4e7"/>
+  <text x="368" y="235" font-size="12" fill="#3f3f46">Total net sales were $391.0 billion in 2024,</text>
+  <text x="368" y="255" font-size="12" fill="#3f3f46">up 2% from $383.3 billion in 2023.</text>
+  <rect x="628" y="243" width="16" height="16" rx="4" fill="#e0e7ff"/>
+  <text x="636" y="255" font-size="10" fill="#4338ca" text-anchor="middle">1</text>
+  <rect x="348" y="540" width="452" height="34" rx="8" fill="#fff" stroke="#d4d4d8"/>
+  <text x="368" y="562" font-size="12" fill="#a1a1aa">Ask a question…</text>
+
+  <!-- right: citations -->
+  <rect x="848" y="120" width="312" height="470" rx="12" fill="#fff" stroke="#e4e4e7"/>
+  <text x="868" y="148" font-size="11" font-weight="700" fill="#a1a1aa">CITATIONS</text>
+  <rect x="868" y="164" width="272" height="120" rx="10" fill="#fff" stroke="#c7d2fe"/>
+  <text x="888" y="188" font-size="11" fill="#3f3f46">apple-10-k-2024.pdf</text>
+  <text x="1120" y="188" font-size="10" fill="#71717a" text-anchor="end">p. 31</text>
+  <text x="888" y="212" font-size="11" font-style="italic" fill="#52525b">“Total net sales increased 2% or $8.0</text>
+  <text x="888" y="228" font-size="11" font-style="italic" fill="#52525b">billion during 2024 compared to 2023…”</text>
+  <text x="888" y="262" font-size="11" font-weight="600" fill="#4f46e5">Open source →</text>
+
+  <text x="600" y="640" font-size="12" fill="#a1a1aa" text-anchor="middle">Replace docs/screenshot.svg with a real screenshot of your running app.</text>
+</svg>
